@@ -34,8 +34,12 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-const string = process.env.DB;
-mongoose.connect(string);
+async function connect() {
+	const string = process.env.DB;
+	await mongoose.connect(string);
+	console.log("Db connected");
+}
+const ok = connect();
 
 app.listen(3000, function () {
 	console.log("server started on port 3000");
