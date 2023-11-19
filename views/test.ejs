@@ -1,0 +1,1014 @@
+//Login
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>Manager</title>
+  <link rel="canonical" href="css/">
+  <link href="/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link href="/css/cover.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+</head>
+<!-- ! NAVBAR -->
+
+<body class="text-center">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">
+          <img src="/icons/bug.png" class="brand-icon" alt="image">
+          BUGZILLA
+        </h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link active" href="#">Sign in</a>
+        </nav>
+      </div>
+    </header>
+    <!-- ! MAIN -->
+
+    <h2 class="cover-heading">Log in</h2>
+    <br>
+    <form method="post" action="/login">
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Enter email" required>
+      </div>
+      <div class="form-group">
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+      </div>
+      <!-- Add more form fields as needed -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <!-- ! FOOTER -->
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p>Coded by Ikhlaq Ahmad Makki</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//styles
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background: #0a1527;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	flex-direction: column;
+	
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+
+    position: relative;
+    display: flex;
+    z-index: 1; /* Make sure bubbles are above the center text */
+}
+
+.bubbles span {
+    position: relative;
+	width: 30px;
+	height: 30px;
+	background: #4fc3dc;
+	margin: 0 4px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 10px #4fc3dc44,
+	0 0 50px #4fc3dc,
+	0 0 100px #4fc3dc;
+	animation: animate 15s linear infinite;
+	animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: #ff2d75;
+	box-shadow: 0 0 0 10px #ff2d7544,
+	0 0 50px #ff2d75,
+	0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+    0%
+	{
+		transform: translateY(100vh) scale(0);
+	}
+	100%
+	{
+		transform: translateY(-10vh) scale(1);
+	}
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #e3e7e7;
+    z-index: 2; /* Place the center text above the bubbles */
+}
+
+.signup-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4fc3dc; /* Blue color */
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Curved edges */
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-button:hover {
+    background-color: #0f1215; /* Darker blue color on hover */
+    transform: scale(1.05); /* Slight scale increase on hover */
+}
+
+.login-link {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+//cover
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+body {
+  
+  display: -webkit-box;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+/*
+ * Header
+ */
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: rgba(255, 255, 255, .5);
+}
+
+
+
+/* form-style.css */
+
+/* Center the form */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+/* Style for form elements */
+.form-group {
+  margin-bottom: 12px; /* Increased margin for spacing */
+  text-align: center;
+}
+
+.form-label {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.form-control {
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  width: 40%;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+/* Style for the submit button */
+.submit-button {
+  margin-top: 12px; /* Increased margin for spacing */
+  text-align: center;
+}
+
+/* Add a background color to input fields on focus */
+.form-control:focus {
+  background-color: #f7f7f7;
+}
+
+
+.red-color {
+  color:red;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //without bubbles login page
+  <!doctype html>
+  <html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Manager</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="/css/cover.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+  
+  
+  </head>
+  <!-- ! NAVBAR -->
+  
+  <body class="text-center">
+    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">
+            <img src="/icons/bug.png" class="brand-icon" alt="image">
+            BUGZILLA
+          </h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">Sign in</a>
+          </nav>
+        </div>
+      </header>
+      <!-- ! MAIN -->
+      <h2 class="cover-heading">Log in</h2>
+      <br>
+      <form method="post" action="/login">
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+        <input type="password" id="password" name="password" placeholder="Enter password" required>
+        </div>
+        <!-- Add more form fields as needed -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+  
+      <!-- ! FOOTER -->
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Coded by Ikhlaq Ahmad Makki</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+  
+  </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //log in with bubbles
+  <!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Manager</title>
+  <link href="/css/styles.css" rel="stylesheet">
+
+
+</head>
+<!-- ! NAVBAR -->
+
+<body>
+
+  <div class="container">
+
+    
+  <div class="bubbles">    
+    
+    <span style="--i:11"></span>  
+    <span style="--i:12"></span>    
+    <span style="--i:24"></span>    
+    <span style="--i:10"></span>    
+    <span style="--i:14"></span>    
+    <span style="--i:23"></span>    
+    <span style="--i:18"></span>    
+    <span style="--i:16"></span>    
+    <span style="--i:19"></span>    
+    <span style="--i:20"></span>    
+    <span style="--i:22"></span>    
+    <span style="--i:25"></span>    
+    <span style="--i:18"></span>    
+    <span style="--i:21"></span>    
+    <span style="--i:15"></span>    
+    <span style="--i:13"></span>    
+    <span style="--i:26"></span>    
+    <span style="--i:17"></span>    
+    <span style="--i:13"></span>    
+    <span style="--i:28"></span>  
+    <div class="brand-container">
+      <img src="/icons/bug.png" class="brand-icon" alt="image">
+      <h3 class="brand-text">BUGZILLA</h3> 
+    </div>
+    <div class="center">
+    
+      <br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br>
+      <h1 class="cover-heading">Log in</h1>
+  <br>
+  <form method="post" action="/login">
+    <div class="form-group">
+      <input type="email" id="email" name="email" placeholder="Enter email" required>
+    </div>
+    <div class="form-group">
+    <input type="password" id="password" name="password" placeholder="Enter password" required>
+    </div>
+    <!-- Add more form fields as needed -->
+    <a href="http://localhost:3000/manager/home" class="signup-button">Submit</a> <br>
+  </form>
+    </div>     
+    <span style="--i:11"></span>    
+    <span style="--i:12"></span>    
+    <span style="--i:24"></span>    
+    <span style="--i:10"></span>    
+    <span style="--i:14"></span>    
+    <span style="--i:23"></span>    
+    <span style="--i:18"></span>    
+    <span style="--i:16"></span>    
+    <span style="--i:19"></span>    
+    <span style="--i:20"></span>    
+    <span style="--i:22"></span>    
+    <span style="--i:25"></span>    
+    <span style="--i:18"></span>    
+    <span style="--i:21"></span>    
+    <span style="--i:15"></span>    
+    <span style="--i:13"></span>    
+    <span style="--i:26"></span>    
+    <span style="--i:17"></span>    
+    <span style="--i:13"></span>    
+    <span style="--i:28"></span>
+  </div>
+  </div>
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p><a href="http://localhost:3000/register" class="login-link">Log Out</a></p>
+    </div>
+  </footer>
+</body>
+
+</html>
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+        
+  
+  
+  
+  
+  
+  
+  
+  //register
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>Manager</title>
+  <link rel="canonical" href="css/">
+  <link href="/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link href="/css/cover.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+</head>
+<!-- ! NAVBAR -->
+
+<body class="text-center">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">
+          <img src="/icons/bug.png" class="brand-icon" alt="image">
+          BUGZILLA
+        </h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link active" href="#">Log in</a>
+        </nav>
+      </div>
+    </header>
+    <!-- ! MAIN -->
+
+    <h2 class="cover-heading">Sign up</h2>
+    <br>
+    <div class="signup-container">
+  <form method="post" action="/register">
+
+    
+      <div class="form-group">
+      <input type="text" id="name" name="username" placeholder="Enter username" required>
+      </div>
+  
+      
+      <div class="form-group">
+      <input type="email" id="email" name="email" placeholder="Enter email" required>
+      </div>
+  
+  
+      <div class="form-group">
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+      </div>
+
+
+    <label for="userType">User Type:</label>
+    <select id="userType" name="usertype" required>
+      <option value="developer">Developer</option>
+      <option value="manager">Manager</option>
+      <option value="qa">QA</option>
+    </select>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+    <!-- ! FOOTER -->
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p>Coded by Ikhlaq Ahmad Makki</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//bubbles register
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Manager</title>
+  <link href="/css/styles.css" rel="stylesheet">
+
+
+</head>
+<!-- ! NAVBAR -->
+
+<body>
+
+  <div class="container">
+
+    
+  <div class="bubbles">    
+    
+    <span style="--i:11"></span>  
+    <span style="--i:12"></span>    
+    <span style="--i:24"></span>    
+    <span style="--i:10"></span>    
+    <span style="--i:14"></span>    
+    <span style="--i:23"></span>    
+    <span style="--i:18"></span>    
+    <span style="--i:16"></span>    
+    <span style="--i:19"></span>    
+    <span style="--i:20"></span>    
+    <span style="--i:22"></span>    
+    <span style="--i:25"></span>    
+    <span style="--i:18"></span>    
+    <span style="--i:21"></span>    
+    <span style="--i:15"></span>    
+    <span style="--i:13"></span>    
+    <span style="--i:26"></span>    
+    <span style="--i:17"></span>    
+    <span style="--i:13"></span>    
+    <span style="--i:28"></span>  
+    <div class="brand-container">
+      <img src="/icons/bug.png" class="brand-icon" alt="image">
+      <h3 class="brand-text">BUGZILLA</h3> 
+    </div>
+    <div class="center">
+    
+      <br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br>
+      <h1 class="cover-heading">Sign in</h1>
+  <br>
+  <form method="post" action="/register">
+    <div class="form-group">
+      <input type="username" id="username" name="username" placeholder="Enter username" required>
+    </div>
+    <div class="form-group">
+      <input type="email" id="email" name="email" placeholder="Enter email" required>
+    </div>
+    <div class="form-group">
+    <input type="password" id="password" name="password" placeholder="Enter password" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="userType">User Type:</label>
+    <select id="userType" name="usertype" required>
+      <option value="developer">Developer</option>
+      <option value="manager">Manager</option>
+      <option value="qa">QA</option>
+    </select>
+      </div>
+
+    <!-- Add more form fields as needed -->
+    <a href="http://localhost:3000/login" class="signup-button">Submit</a> <br>
+  </form>
+    </div>     
+    <span style="--i:11"></span>    
+    <span style="--i:12"></span>    
+    <span style="--i:24"></span>    
+    <span style="--i:10"></span>    
+    <span style="--i:14"></span>    
+    <span style="--i:23"></span>    
+    <span style="--i:18"></span>    
+    <span style="--i:16"></span>    
+    <span style="--i:19"></span>    
+    <span style="--i:20"></span>    
+    <span style="--i:22"></span>    
+    <span style="--i:25"></span>    
+    <span style="--i:18"></span>    
+    <span style="--i:21"></span>    
+    <span style="--i:15"></span>    
+    <span style="--i:13"></span>    
+    <span style="--i:26"></span>    
+    <span style="--i:17"></span>    
+    <span style="--i:13"></span>    
+    <span style="--i:28"></span>
+  </div>
+  </div>
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>Already have an account?<a href="http://localhost:3000/login" class="login-link">Log in</a></p>
+    </div>
+  </footer>
+</body>
+
+</html>
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,359 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #0a1527;
+}
+
+body {
+  
+  display: -webkit-box;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+/*
+ * Header
+ */
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: rgba(255, 255, 255, .5);
+}
+
+
+
+/* form-style.css */
+
+/* Center the form */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+/* Style for form elements */
+.form-label {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.form-control {
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  width: 40%;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+/* Style for the submit button */
+.submit-button {
+  margin-top: 12px; /* Increased margin for spacing */
+  text-align: center;
+}
+
+/* Add a background color to input fields on focus */
+.form-control:focus {
+  background-color: #f7f7f7;
+}
+
+
+.red-color {
+  color:black;}
+
+
+  .signup-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #4fc3dc; /* Blue color */
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Curved edges */
+    font-size: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-button:hover {
+    background-color: #0f1215; /* Darker blue color on hover */
+    transform: scale(1.05); /* Slight scale increase on hover */
+}
+
+.delete-button {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color:white; /* Blue color */
+  color: #fff;
+  border: none;
+  border-radius: 20px; /* Curved edges */
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color:#d32323; /* Darker blue color on hover */
+  transform: scale(1.05); /* Slight scale increase on hover */
+}
+
+
+
+.bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+
+    .card-link {
+      text-decoration: none;
+      color: black;
+    }
+
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color:#221c92;
+      color: black;
+      height: 80%;
+      padding: 10px;
+    }
+
+
+
+
+    
+.report-button {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color:rgb(252, 252, 252); /* Blue color */
+  color: #070707;
+  border: none;
+  border-radius: 20px; /* Curved edges */
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.report-button:hover {
+  background-color:#d32323; /* Darker blue color on hover */
+  transform: scale(1.05); /* Slight scale increase on hover */
+}
+
+.show {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color:rgb(252, 252, 252); /* Blue color */
+  color: #070707;
+  border: none;
+  border-radius: 20px; /* Curved edges */
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.show:hover {
+  color: #eadfdf;
+  background-color:#070707; /* Darker blue color on hover */
+  transform: scale(1.05); /* Slight scale increase on hover */
+}
+
+
+
+
+.description {
+  margin-bottom: 17px; /* Increased margin for spacing */
+  text-align: center; /* Increase the font size for better readability */
+}
+
+.description input {
+  width: 40%; /* Increase the width to occupy more space */
+  height: 100px; /* Increase the height to make the input field taller */
+  padding: 10px; /* Add padding for spacing */
+  border: none;
+  border-radius: 12px; /* Rounded corners */
+  background-color: #e3e7e7; /* Light gray background color */
+  font-size: 14px; /* Increase the font size for better readability */
+  color: #0a1527; /* Dark text color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.form-group {
+  margin-bottom: 17px; /* Increased margin for spacing */
+  text-align: center;
+}
+.form-group input {
+  width: 40%; /* Make the input field occupy the full width */
+  padding: 5px; /* Add padding for spacing */
+  border: none;
+  border-radius: 12px; /* Rounded corners */
+  background-color: #e3e7e7; /* Light gray background color */
+  font-size: 14px;
+  color: #0a1527; /* Dark text color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.date-input {
+  margin-bottom: 17px; /* Increased margin for spacing */
+  text-align: center;
+}
+
+.date-input input[type="date"] {
+  /* Customize the appearance of the date input */
+  width: 29%;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 12px;
+}
+
+
+#status {
+  width: 32.5%;
+  border-radius: 12px; /* Adjust the value to control the roundness */
+  padding: 5px; /* Adding padding for a better visual appearance */
+}
+
+#Type {
+  width: 34%;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 12px; /* Adjust the value to control the roundness of the edges */
+  padding: 5px; /* Optional: Add some padding for better visual appearance */
+}
+
+#userType {
+  border-radius: 12px; /* Adjust the value to control the roundness of the edges */
+  padding: 5px; /* Optional: Add some padding for better visual appearance */
+}
+
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+/* Added CSS for changing button color */
+.resolved {
+  background-color: green !important;
+}

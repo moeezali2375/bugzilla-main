@@ -1,0 +1,179 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background: #0a1527;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	flex-direction: column;
+	
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+
+    position: relative;
+    display: flex;
+    z-index: 1; /* Make sure bubbles are above the center text */
+}
+
+.bubbles span {
+    position: relative;
+	width: 30px;
+	height: 30px;
+	background: #4fc3dc;
+	margin: 0 4px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 10px #4fc3dc44,
+	0 0 50px #4fc3dc,
+	0 0 100px #4fc3dc;
+	animation: animate 15s linear infinite;
+	animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: #ff2d75;
+	box-shadow: 0 0 0 10px #ff2d7544,
+	0 0 50px #ff2d75,
+	0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+    0%
+	{
+		transform: translateY(100vh) scale(0);
+	}
+	100%
+	{
+		transform: translateY(-10vh) scale(1);
+	}
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #e3e7e7;
+    z-index: 2; /* Place the center text above the bubbles */
+}
+
+.signup-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4fc3dc; /* Blue color */
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Curved edges */
+    font-size: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-button:hover {
+    background-color: #0f1215; /* Darker blue color on hover */
+    transform: scale(1.05); /* Slight scale increase on hover */
+}
+
+.login-link {
+    color: white;
+    text-decoration: none;
+}
+
+
+.form-group {
+    margin-bottom: 12px; /* Increased margin for spacing */
+    text-align: center;
+  }
+
+
+
+
+  /* Increase the size of the form */
+.form-group input {
+    width: 79%; /* Make the input field occupy the full width */
+    padding: 5px; /* Add padding for spacing */
+    border: none;
+    border-radius: 12px; /* Rounded corners */
+    background-color: #e3e7e7; /* Light gray background color */
+    font-size: 15px;
+    color: #0a1527; /* Dark text color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Style the submit button */
+
+
+/* Increase the spacing between form elements */
+.form-group {
+    margin-bottom: 17px; /* Increased margin for spacing */
+    text-align: center;
+}
+
+
+
+
+
+/* Style for the footer */
+.mastfoot {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #0a1527;
+    color: #e3e7e7;
+    padding: 10px 0;
+}
+
+.inner {
+    text-align: center;
+}
+
+/* Additional styling for the text inside the footer */
+.mastfoot p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Add margin to the left */
+  }
+
+  .brand-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .brand-text {
+    color: white;
+    font-size: 30px;
+  }
+
+  .brand-text {
+    text-align: left;
+    margin-top: 20px; /* Add space between "BUGZILLA" and "Sign in" */
+  }
+  .nav-link.active {
+    color: white; /* Change the color of "Signin" to white */
+  }
+
+
+
+  select#userType {
+    border-radius: 20px; /* Adjust the value as needed */
+    padding: 4px; /* Add padding to improve appearance */
+  }
