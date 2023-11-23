@@ -1,2 +1,2 @@
 # bugzilla
-A MERN project created by Ayesha Saikhani!
+A MERN-stack project created by Moeez!
